@@ -28,13 +28,16 @@ function newQuestion() {
           addDepartment();
           break;
         case "add a role":
-          console.log(answers.menu);
+          addRole();
           break;
         case "add an employee":
           console.log(answers.menu);
           break;
         case "update an employee role":
           console.log(answers.menu);
+          break;
+        case "exit":
+          exit();
           break;
       }
     });
@@ -85,7 +88,7 @@ function addDepartment() {
       {
         type: "input",
         name: "new",
-        message: "what do you want to add?",
+        message: "what department do you wish to add?",
       },
     ])
     .then((answers) => {
@@ -102,16 +105,65 @@ function addDepartment() {
       );
     });
 }
-// function roles() {
-//   db.query("select * from role", (err, result) => {
-//     if (err) {
-//       console.log(err);
-//       return;
-//     } else console.table(result);
-//     newQuestion();
-//   });
-// }
+function addRole() {
+  db.query("SELECT * FROM department", (err, departments) => {
+    if (err) {
+      console.log(err);
+      return;
+    }
 
+    inquirer
+      .prompt([
+        {
+          type: "input",
+          name: "title",
+          message: "What role do you wish to add?",
+        },
+        {
+          type: "number",
+          name: "salary",
+          message: "What salary does this role have? (Please use numbers)",
+        },
+        {
+          type: "list",
+          name: "department_id",
+          message: "What department does this belong to?(Choose from the list)",
+          choices: departments.map((department) => ({
+            name: department.name,
+            value: department.id,
+          })),
+        },
+      ])
+      .then((answers) => {
+        db.query(
+          "INSERT INTO role (title, salary, department_id) VALUES (?, ?, ?)",
+          [answers.title, answers.salary, answers.department_id],
+          (err, result) => {
+            if (err) {
+              console.log(err);
+              return;
+            } else console.table(result);
+            newQuestion();
+          }
+        );
+      });
+  });
+}
+
+function addEmployee() {
+  db.query("select * from role", (err, result) => {
+    if (err) {
+      console.log(err);
+      return;
+    } else console.table(result);
+    newQuestion();
+  });
+}
+
+function exit() {
+  console.log("Thanks for using my application");
+  process.exit();
+}
 const options = [
   "view all departments",
   "view all roles",
