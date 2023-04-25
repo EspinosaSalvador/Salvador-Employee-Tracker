@@ -112,50 +112,6 @@ function addRole() {
       return;
     }
 
-    inquirer.prompt([
-      {
-        type: "input",
-        name: "title",
-        message: "What role do you wish to add?",
-      },
-      {
-        type: "number",
-        name: "salary",
-        message: "What salary does this role have? (Please use numbers)",
-      },
-      {
-        type: "list",
-        name: "department_id",
-        message: "What department does this belong to?(Choose from the list)",
-        choices: departments.map((department) => ({
-          name: department.name,
-          value: department.id,
-        })),
-      },
-    ]);
-
-    inquirer.prompt([
-      {
-        type: "input",
-        name: "title",
-        message: "What role do you wish to add?",
-      },
-      {
-        type: "number",
-        name: "salary",
-        message: "What salary does this role have? (Please use numbers)",
-      },
-      {
-        type: "list",
-        name: "department_id",
-        message: "What department does this belong to?(Choose from the list)",
-        choices: departments.map((department) => ({
-          name: department.name,
-          value: department.id,
-        })),
-      },
-    ]);
-
     inquirer
       .prompt([
         {
