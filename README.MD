@@ -45,11 +45,11 @@ To install this project please proceed to my [GitHub Repository](https://github.
 
 you should be able to see this,
 
-![Github Repository](./public/assets/img/Github-repository.png)
+![Github Repository](./img/github-repository.png)
 
 Click on code as shown in the image
 
-![Click on Code](./public/assets/img/SSH-Key.png)
+![Click on Code](./img/ssh-key.png)
 
 Copy the SSH key or the HTTPS key and open.
 
@@ -60,7 +60,7 @@ Copy the SSH key or the HTTPS key and open.
 either one of this will work. please proceed to the terminal an put in your Terminal,
 
 ```
-git clone git@github.com:EspinosaSalvador/Note-taker-Salvador.git
+git clone git@github.com:EspinosaSalvador/Salvador-Employee-Tracker.git
 ```
 
 and now you have a copy of the code.
@@ -83,34 +83,61 @@ git checkout ＜branchname＞
 
 If you want to show us your code and merge please open a pull request on
 
-[Github](https://github.com/EspinosaSalvador/Note-taker-Salvador/pulls).
+[Github](https://github.com/EspinosaSalvador/Salvador-Employee-Tracker/pulls).
 
-![Pull request](./public/assets/img/Pull-request.png)
+![Pull request](./img/pull-request.png)
 
 ## What you should be able to see
 
-[here is the link to my webpage in heroku running](https://floating-fortress-79975.herokuapp.com)
+To start this app please use npm start in the command line or your terminal. after that you should be able to see this
 
-These is what you should be able to see in the Webpage, in Heroku
-![Webpage](./public/assets/img/App-running-in-heroku.png)
+![app running and showing a list of commands that we can use for the app.](./img/app-running.png)
 
-the webpage is very straight forward we only need to click on get started to start taking notes
+I am going to show you some basic commands that we are using for example lest start with "view all departments".
 
-![second-part-of-the-webpage](./public/assets/img/adding-notes.png)
+![view all departments img.](./img/view%20all%20departments.png)
 
-you need to write the title and the text after that you can click on the following image
+the image above show us a table showing us the follwing on its rows:
 
-![saving-Itmes](./public/assets/img/Saving-items.png)
+* id
+* name
 
-and if you want to delete items you just need to click on the trash bin
+to continue lets look at the table from roles. here is the way that is looking as in version 1.00.
 
-![Deleting-items](./public/assets/img/Delete.png)
+we are able to see:
+
+* id
+* title
+* salary
+* department_id.
+
+![view all roles img.](./img/view%20all%20roles.png)
+
+when we click on view all employees you should be able to see this.
+
+you should see the following rows in the table:
+
+* id
+* first_name
+* last_name
+* role_id
+* manager_id
+
+![view all employees](./img/view%20all%20employees.png)
+
+and if you wish to add departments this is what you should be able to see. 
+
+just type the name of the department that you wish.
+
+![Add department](./img/add-department.png)
+
+and repeat the same process with add role and add employee. just follow the instructions and see what the command line is asking you to do.
 
 ## Troubleshooting
 
-The team-profile-generator is in version 1.0 ,please let me know if there are anybug in the webpage by issuing it in [Github](https://github.com/EspinosaSalvador/Note-taker-Salvador/issues)
+The Employee-Tracker is in version 1.0, please let me know if there are anybug in the webpage by issuing it in [Github](https://github.com/EspinosaSalvador/Salvador-Employee-Tracker/issues)
 
-![Issues-webpage](./public/assets/img/issues.png)
+![Issues-webpage](./img/issue.png)
 
 ## Next Phase Development
 
