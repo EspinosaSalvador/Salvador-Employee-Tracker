@@ -6,6 +6,7 @@
 * [Features](#features)
 * [Requirements](#requirements)
 * [Installation](#installation)
+* [Video](#video)
 * [Configuration](#configuration)
 * [What you should be able to see](#what-you-should-be-able-to-see)
 * [Troubleshooting](#troubleshooting)
@@ -66,6 +67,12 @@ git clone git@github.com:EspinosaSalvador/Salvador-Employee-Tracker.git
 and now you have a copy of the code.
 
 you can work/play/use the app
+
+## Video
+
+if you want to watch my walkthorough please click on the video. we are doing the same steps that were previously stated.
+
+[![Watch the video](./img/video.png)](https://drive.google.com/file/d/1Ca7Zyrq-ttSEVDJrPyznqdMQzxGQXxfp/view)
 
 ## Configuration
 
